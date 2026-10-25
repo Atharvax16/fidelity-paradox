@@ -1,0 +1,14 @@
+B-scans: 3049   eyes (folders): 156
+Left panel pure grayscale: 763/3049
+Unassigned mask pixels (colour blends): 546798 (0.0828% of all mask pixels)
+Split sizes (B-scans): train=2346, val=703
+Eyes appearing in BOTH train and val: 0
+
+class   scans with it  % scans  lesions  median px   <50 px  <200 px
+SRF              1787    58.6%     2668        946       91      447
+IRF               725    23.8%     2322        165      441     1291
+PED              2084    68.4%     3066        740      133      712
+SHRM             1625    53.3%     1944       2160       36      120
+ISOS             2748    90.1%  (layer, not counted as lesions)
+
+Scans with no lesion at all: 171

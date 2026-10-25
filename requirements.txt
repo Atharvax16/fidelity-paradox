@@ -1,0 +1,10 @@
+numpy
+pandas
+pillow
+scipy
+matplotlib
+scikit-image
+bm3d
+openpyxl
+torch
+jupyter

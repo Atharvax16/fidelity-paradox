@@ -1,0 +1,27 @@
+# Datasets (download separately, see README)
+*.zip
+AMD-SD/images/
+AMD-SD/*.xlsx
+DDR/
+
+# Generated caches and model outputs
+AMD-SD/_analysis/denoised_cache/
+AMD-SD/_analysis/seg_cache/
+AMD-SD/_analysis/seg_checkpoints/
+AMD-SD/_analysis/seg_eval/
+*.pt
+
+# Scratch
+AMD-SD/_analysis/.test_figs/
+AMD-SD/_analysis/.make_nb.py
+Untitled.ipynb
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# macOS
+.DS_Store

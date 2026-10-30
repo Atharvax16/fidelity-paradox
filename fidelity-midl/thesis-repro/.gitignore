@@ -1,0 +1,6 @@
+# local environment and run artefacts (data, checkpoints and results live outside the repo)
+.venv/
+__pycache__/
+work/
+runs/
+checks/out/*.log

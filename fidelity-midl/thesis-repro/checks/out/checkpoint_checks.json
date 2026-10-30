@@ -1,0 +1,281 @@
+[
+  {
+    "check": "v2/resnet50_best.pt keys",
+    "status": "PASS",
+    "arch": "resnet50",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v2/resnet50_best.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.7568,
+    "val_acc_stored": 0.7591,
+    "val_f1": 0.5446,
+    "test_acc_noTTA": 0.7568,
+    "test_pred_dist": {
+      "0": 229,
+      "1": 75,
+      "2": 118,
+      "3": 5,
+      "4": 13
+    }
+  },
+  {
+    "check": "v2/efficientnet_b3_best.pt keys",
+    "status": "PASS",
+    "arch": "efficientnet_b3",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v2/efficientnet_b3_best.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.7682,
+    "val_acc_stored": 0.7682,
+    "val_f1": 0.6073,
+    "test_acc_noTTA": 0.7636,
+    "test_pred_dist": {
+      "0": 220,
+      "1": 20,
+      "2": 90,
+      "3": 36,
+      "4": 74
+    }
+  },
+  {
+    "check": "v2/vit_base_best.pt keys",
+    "status": "PASS",
+    "arch": "vit_base",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v2/vit_base_best.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.8205,
+    "val_acc_stored": 0.8227,
+    "val_f1": 0.6736,
+    "test_acc_noTTA": 0.8432,
+    "test_pred_dist": {
+      "0": 220,
+      "1": 40,
+      "2": 118,
+      "3": 24,
+      "4": 38
+    }
+  },
+  {
+    "check": "v3/resnet50_v3_best.pt keys",
+    "status": "PASS",
+    "backbone": "convnext_base.fb_in22k_ft_in1k_384",
+    "distilled_from": null,
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v3/resnet50_v3_best.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.8591,
+    "val_acc_stored": 0.8591,
+    "val_f1": 0.7251,
+    "test_acc_noTTA": 0.8841,
+    "test_pred_dist": {
+      "0": 213,
+      "1": 44,
+      "2": 137,
+      "3": 20,
+      "4": 26
+    },
+    "val_kappa_recomputed": 0.913,
+    "val_kappa_stored": 0.913
+  },
+  {
+    "check": "v3/resnet50_v3_distilled.pt keys",
+    "status": "PASS",
+    "backbone": "convnext_base.fb_in22k_ft_in1k_384",
+    "distilled_from": "vit_base",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v3/resnet50_v3_distilled.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.7455,
+    "val_acc_stored": 0.7455,
+    "val_f1": 0.5813,
+    "test_acc_noTTA": 0.7818,
+    "test_pred_dist": {
+      "0": 210,
+      "1": 69,
+      "2": 85,
+      "3": 59,
+      "4": 17
+    },
+    "val_kappa_recomputed": 0.8931,
+    "val_kappa_stored": 0.8931
+  },
+  {
+    "check": "v3/efficientnet_b3_v3_best.pt keys",
+    "status": "PASS",
+    "backbone": "tf_efficientnetv2_s.in21k_ft_in1k",
+    "distilled_from": null,
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v3/efficientnet_b3_v3_best.pt predictions",
+    "status": "WARN",
+    "flags": [
+      "undertrained(val_acc<0.6)"
+    ],
+    "val_acc_recomputed": 0.4636,
+    "val_acc_stored": 0.4636,
+    "val_f1": 0.2384,
+    "test_acc_noTTA": 0.4932,
+    "test_pred_dist": {
+      "0": 317,
+      "1": 36,
+      "3": 57,
+      "4": 30
+    },
+    "val_kappa_recomputed": 0.3586,
+    "val_kappa_stored": 0.3615
+  },
+  {
+    "check": "v3/efficientnet_b3_v3_distilled.pt keys",
+    "status": "PASS",
+    "backbone": "tf_efficientnetv2_s.in21k_ft_in1k",
+    "distilled_from": "vit_base",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v3/efficientnet_b3_v3_distilled.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.8091,
+    "val_acc_stored": 0.8114,
+    "val_f1": 0.6824,
+    "test_acc_noTTA": 0.8386,
+    "test_pred_dist": {
+      "0": 215,
+      "1": 64,
+      "2": 95,
+      "3": 32,
+      "4": 34
+    },
+    "val_kappa_recomputed": 0.8994,
+    "val_kappa_stored": 0.9001
+  },
+  {
+    "check": "v3/vit_base_v3_best.pt keys",
+    "status": "PASS",
+    "backbone": "vit_base_patch16_clip_384.laion2b_ft_in12k_in1k",
+    "distilled_from": null,
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "v3/vit_base_v3_best.pt predictions",
+    "status": "PASS",
+    "flags": [],
+    "val_acc_recomputed": 0.8409,
+    "val_acc_stored": 0.8409,
+    "val_f1": 0.7281,
+    "test_acc_noTTA": 0.8364,
+    "test_pred_dist": {
+      "0": 215,
+      "1": 59,
+      "2": 105,
+      "3": 31,
+      "4": 30
+    },
+    "val_kappa_recomputed": 0.9053,
+    "val_kappa_stored": 0.9053
+  },
+  {
+    "check": "v3/vit_base_v3_distilled.pt",
+    "status": "INFO",
+    "note": "not present"
+  },
+  {
+    "check": "quality_classifier.pt keys",
+    "status": "PASS",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "quality argmax on clean APTOS test, TFM_EVAL (224, as trained)",
+    "status": "INFO",
+    "argmax_distribution": {
+      "good": 291,
+      "usable": 106,
+      "reject": 43
+    },
+    "max_abs_diff_vs_drive_probs": 0.9858
+  },
+  {
+    "check": "quality argmax on clean APTOS test, TFM_EVAL_V3 (BenGraham 384, as used in Phase 5)",
+    "status": "INFO",
+    "argmax_distribution": {
+      "reject": 400,
+      "good": 7,
+      "usable": 33
+    },
+    "max_abs_diff_vs_drive_probs": 0.0008
+  },
+  {
+    "check": "RealESRGAN_x2plus.pth keys (notebook uses strict=False)",
+    "status": "PASS",
+    "key_used": "params_ema",
+    "missing": 0,
+    "unexpected": 0
+  },
+  {
+    "check": "restorer cold_diffusion_v6.pt",
+    "status": "INFO",
+    "n_tensors": 63,
+    "T_STEPS": 8,
+    "kind_weights": {
+      "blur": 0.25,
+      "exposure": 0.25,
+      "noise": 0.5
+    },
+    "epochs_trained": 15,
+    "first": {
+      "epoch": 1,
+      "l1": 0.0374972150670587,
+      "lr": 0.00019781476007338058
+    },
+    "last": {
+      "epoch": 15,
+      "l1": 0.0068896594778364425,
+      "lr": 0.0
+    }
+  },
+  {
+    "check": "restorer swinir_gan_v6.pt",
+    "status": "INFO",
+    "n_tensors": 134,
+    "adv_w": 0.005,
+    "freeze_d_after": 4
+  },
+  {
+    "check": "restorer ddpm_fundus_v1.pt",
+    "status": "INFO",
+    "n_tensors": 64,
+    "T": 1000
+  },
+  {
+    "check": "restorer ddpm_pathology_v1.pt",
+    "status": "INFO",
+    "n_tensors": 70,
+    "T": 1000
+  }
+]

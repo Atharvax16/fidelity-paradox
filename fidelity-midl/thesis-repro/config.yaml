@@ -1,0 +1,25 @@
+# Single source of truth for everything machine-specific in the port.
+# Relative paths are resolved against the fidelity-midl/ directory (the parent of thesis-repro/).
+
+seed: 42                 # notebook's SEED; also used for python/numpy/torch global seeding
+pythonhashseed: 0        # fixes str-hash order -> makes list(set_of_ids)[:N] subsets deterministic
+device: mps              # mps | cpu | cuda
+mps_fallback: true       # PYTORCH_ENABLE_MPS_FALLBACK=1 (unsupported MPS ops run on CPU)
+dataloader_num_workers: 0  # notebook uses 2; worker processes cannot pickle notebook-defined classes under macOS spawn
+
+paths:
+  # inputs (read-only)
+  aptos_dir:        data/extracted/aptos            # train_1.csv + {train,val,test}_images/<split>/*.png
+  eyeq_dir:         data/extracted/eyeq             # symlink -> data/Thesis/EYEQ (CSVs + zips; images not needed)
+  degraded_dir:     data/derived/degraded           # extracted from thesis_frozen/degraded/cache_degraded.tar.gz (4 May)
+  enhanced_dir:     data/derived/enhanced           # extracted from thesis_frozen/enhanced/cache_enhanced_v3.tar.gz (2 Jun)
+  degraded_cache:   data/derived/thesis_frozen/degraded/cache_degraded.tar.gz
+  enhanced_cache:   data/derived/thesis_frozen/enhanced/cache_enhanced_v3.tar.gz
+  classifier_ckpts: checkpoints/classifiers/checkpoints   # *_best.pt, quality_classifier.pt, v3/
+  restorer_ckpts:   checkpoints/restorers                 # cold_diffusion_v6, swinir_gan_v6, ddpm_*, RealESRGAN_x2plus
+  original_results: results/results                       # Drive results/ as downloaded (reference only, never written)
+  thesis_zip:       data/Thesis.zip                       # reference only; data is pre-extracted, the zip is never opened
+  # outputs
+  local_root:       thesis-repro/work                     # stands in for /content/data (pristine/, lesion_masks/)
+  ckpt_view:        thesis-repro/work/checkpoints         # symlink farm = Drive's flat checkpoints/ layout
+  results_root:     results/repro                         # stands in for /content/drive/MyDrive/Thesis/results
